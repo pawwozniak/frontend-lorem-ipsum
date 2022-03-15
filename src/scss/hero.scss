@@ -1,0 +1,113 @@
+.pagination {
+  position: absolute;
+  width: 104px;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+
+  .bullet {
+    background-color: $background;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 0 8px;
+    cursor: pointer;
+
+    &.bullet--active {
+      background-color: $yellow;
+    }
+  }
+}
+
+.arrow {
+  top: 480px;
+  position: absolute;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.left-arrow {
+  transform: rotate(-90deg);
+  left: 20px;
+}
+
+.right-arrow {
+  transform: rotate(90deg);
+  right: 20px;
+}
+
+.hero {
+  display: flex;
+  background-color: $darker-gray;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  overflow: auto;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    img {
+      border-radius: 25px;
+      object-fit: cover;
+      margin: 90px 60px 0 60px;
+
+      @media (max-width: 576px) {
+        width: 280px;
+      }
+    }
+
+    .slider-text {
+      text-align: left;
+      color: $lighter-gray;
+      font-size: 60px;
+      font-weight: 100;
+      margin-top: 150px;
+      line-height: 1.2;
+      width: 480px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .button {
+      margin-top: 200px;
+      background-color: $yellow;
+      border-radius: 50px;
+      font-size: 16px;
+      height: 50px;
+      line-height: 50px;
+      padding: 18px 40px;
+      color: $darker-gray;
+      font-weight: 600;
+      transition: background-color 0.18s ease;
+
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+}
